@@ -39,7 +39,7 @@ export function isValid(errors) {
   throw new Error("TODO: isValid");
 }
 
-// --- Demo: runs only via `npm run exercise 03 project` ---
+// --- Demo: runs only via `npm run lesson 17` ---
 if (import.meta.main) {
   const rules = {
     username: compose(required(), minLength(3), maxLength(20)),

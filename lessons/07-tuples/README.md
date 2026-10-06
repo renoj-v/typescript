@@ -1,4 +1,4 @@
-# 02.02: Tuples for coordinates, ranges and colors
+# Lesson 07: Tuples for coordinates, ranges and colors
 
 **Type:** ✍️ Write the code · **Time:** ~20 min
 

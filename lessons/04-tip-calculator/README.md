@@ -1,4 +1,4 @@
-# 01.04: Add types to a JS tip calculator
+# Lesson 04: Add types to a JS tip calculator
 
 **Type:** 🏷️ Add types to existing JS · **Time:** ~15 min
 

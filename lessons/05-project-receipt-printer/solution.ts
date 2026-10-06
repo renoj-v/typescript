@@ -61,7 +61,7 @@ export function printReceipt(order: Order): string {
   ].join("\n");
 }
 
-// --- Demo: runs only via `npm run exercise 01 project` ---
+// --- Demo: runs only via `npm run lesson 5` ---
 // Annotating with `Order` checks the sample data against the interface.
 const sampleOrder: Order = {
   id: "A-1001",

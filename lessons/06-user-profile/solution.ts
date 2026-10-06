@@ -23,7 +23,7 @@ export function addInterest(profile: UserProfile, interest: string): UserProfile
     return { ...profile, interests: [...profile.interests] };
   }
   // Spreading creates new objects/arrays instead of mutating the input.
-  // (Module 04 shows how `readonly` can enforce this at the type level.)
+  // (Part 4 shows how `readonly` can enforce this at the type level.)
   return { ...profile, interests: [...profile.interests, cleaned] };
 }
 

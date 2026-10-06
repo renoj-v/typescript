@@ -11,7 +11,7 @@ export const books: Book[] = [
   { title: "Neuromancer", genre: "sci-fi", price: 14.99 },
 ];
 
-// ---- Part A: remove the redundant annotations ----
+// ---- Step 1: remove the redundant annotations ----
 
 export const prices: number[] = books.map((book: Book): number => book.price);
 
@@ -25,7 +25,7 @@ export function countByGenre(genre: string): number {
   return count;
 }
 
-// ---- Part B: add the annotations that are missing ----
+// ---- Step 2: add the annotations that are missing ----
 
 export function discountedPrice(price, percent) {
   return Math.round(price * (100 - percent)) / 100;

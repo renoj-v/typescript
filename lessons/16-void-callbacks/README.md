@@ -1,4 +1,4 @@
-# 03.05: `void` vs `undefined` in callbacks
+# Lesson 16: `void` vs `undefined` in callbacks
 
 **Type:** 🔧 Fix the type errors · **Time:** ~15 min
 

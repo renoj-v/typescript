@@ -1,4 +1,4 @@
-# 04.04: Build `Admin` from `User` with `extends` and `&`
+# Lesson 21: Build `Admin` from `User` with `extends` and `&`
 
 **Type:** ✍️ Write the code · **Time:** ~20 min
 

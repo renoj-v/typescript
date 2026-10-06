@@ -1,6 +1,6 @@
 // Config helpers, made safe with `unknown`.
 
-/** Provided helper: true if `value` is a non-null object. (Module 05 explains `value is ...`.) */
+/** Provided helper: true if `value` is a non-null object. (Part 5 explains `value is ...`.) */
 export function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
 }

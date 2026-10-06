@@ -1,41 +1,41 @@
 # Progress
 
-Tick each box (`[x]`) when its tests pass. Use `npm run exercise <module> <exercise>` to check.
+Tick each box (`[x]`) when its tests pass. Check a lesson with `npm run lesson <number>`.
 
-## 01: Why TypeScript & setup
-- [ ] Lesson read + "Check your understanding"
+## Part 1: Why TypeScript & setup
+- [ ] Part reading + "Check your understanding" (top of lesson 01)
 - [ ] 01 Fix your first compile errors
 - [ ] 02 Read the error
 - [ ] 03 Types vanish at runtime
 - [ ] 04 Add types to a JS tip calculator
-- [ ] 🛠 Project: Receipt printer CLI
+- [ ] 05 🛠 Project: Receipt printer CLI
 
-## 02: Basic types
-- [ ] Lesson read + "Check your understanding"
-- [ ] 01 Annotate a user profile
-- [ ] 02 Tuples for coordinates, ranges and colors
-- [ ] 03 `any` vs `unknown`: make a config loader safe
-- [ ] 04 Inference: delete what's redundant, add what's missing
-- [ ] 05 `never`, the type for things that can't happen
-- [ ] 🛠 Project: Gradebook summary
+## Part 2: Basic types
+- [ ] Part reading + "Check your understanding" (top of lesson 06)
+- [ ] 06 Annotate a user profile
+- [ ] 07 Tuples for coordinates, ranges and colors
+- [ ] 08 `any` vs `unknown`: make a config loader safe
+- [ ] 09 Inference: delete what's redundant, add what's missing
+- [ ] 10 `never`, the type for things that can't happen
+- [ ] 11 🛠 Project: Gradebook summary
 
-## 03: Functions
-- [ ] Lesson read + "Check your understanding"
-- [ ] 01 Type a shopping cart
-- [ ] 02 An event logger with function types and rest params
-- [ ] 03 A typed `retry` for flaky requests
-- [ ] 04 Overloads, where the output depends on the input
-- [ ] 05 `void` vs `undefined` in callbacks
-- [ ] 🛠 Project: Form validator toolkit
+## Part 3: Functions
+- [ ] Part reading + "Check your understanding" (top of lesson 12)
+- [ ] 12 Type a shopping cart
+- [ ] 13 An event logger with function types and rest params
+- [ ] 14 A typed `retry` for flaky requests
+- [ ] 15 Overloads, where the output depends on the input
+- [ ] 16 `void` vs `undefined` in callbacks
+- [ ] 17 🛠 Project: Form validator toolkit
 
-## 04: Object types
-- [ ] Lesson read + "Check your understanding"
-- [ ] 01 Model a product catalog with `type` and `interface`
-- [ ] 02 An immutable order with `readonly` and optional properties
-- [ ] 03 Inventory with index signatures and `Record`
-- [ ] 04 Build `Admin` from `User` with `extends` and `&`
-- [ ] 05 Add types to a JavaScript address book
-- [ ] 🛠 Project: Library lending system
+## Part 4: Object types
+- [ ] Part reading + "Check your understanding" (top of lesson 18)
+- [ ] 18 Model a product catalog with `type` and `interface`
+- [ ] 19 An immutable order with `readonly` and optional properties
+- [ ] 20 Inventory with index signatures and `Record`
+- [ ] 21 Build `Admin` from `User` with `extends` and `&`
+- [ ] 22 Add types to a JavaScript address book
+- [ ] 23 🛠 Project: Library lending system
 
-## 05–16
+## Parts 5–16
 _Coming in the next batches._

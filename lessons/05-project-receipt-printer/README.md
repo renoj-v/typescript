@@ -1,4 +1,4 @@
-# Mini-project 01: Receipt printer CLI
+# Lesson 05 (project): Receipt printer CLI
 
 **Time:** ~45 min · **Uses:** annotations, interfaces, reading errors, keeping strings and numbers apart
 
@@ -45,7 +45,7 @@ Total                     $35.63
 ### Running it
 
 ```bash
-npm run exercise 01 project
+npm run lesson 5
 ```
 
 This prints the sample receipt (the `import.meta.main` block at the bottom runs only when you execute the file directly, not when the tests import it), then runs the tests.
@@ -60,4 +60,4 @@ This prints the sample receipt (the `import.meta.main` block at the bottom runs 
 
 1. **Money in cents.** Floating-point math gives `0.1 + 0.2 === 0.30000000000000004`. Refactor to store prices as integer cents (`unitPriceCents: number`) and convert only in `formatMoney`.
 2. **Long names.** Truncate item names so a row never exceeds 32 characters, ending them with `…`.
-3. **Real CLI input.** Read an order from a JSON file path given in `process.argv[2]`. Remember that `JSON.parse` gives you unchecked data (see Exercise 03).
+3. **Real CLI input.** Read an order from a JSON file path given in `process.argv[2]`. Remember that `JSON.parse` gives you unchecked data (see Lesson 03).

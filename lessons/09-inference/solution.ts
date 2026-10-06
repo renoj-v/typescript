@@ -12,7 +12,7 @@ export const books: Book[] = [
   { title: "Neuromancer", genre: "sci-fi", price: 14.99 },
 ];
 
-// ---- Part A ----
+// ---- Step 1 ----
 
 // `book` is contextually typed from `books`, and `map` infers `number[]`.
 export const prices = books.map((book) => book.price);
@@ -30,7 +30,7 @@ export function countByGenre(genre: string): number {
   return count;
 }
 
-// ---- Part B ----
+// ---- Step 2 ----
 
 // Parameters are the one place TypeScript can't infer from usage.
 export function discountedPrice(price: number, percent: number): number {

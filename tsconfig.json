@@ -3,6 +3,6 @@
   // Solutions are excluded so their (correct) code can't hide or reveal
   // errors in your starter files.
   "extends": "./tsconfig.base.json",
-  "include": ["modules", "playground", "final-project", "scripts", "*.ts"],
+  "include": ["lessons", "playground", "final-project", "scripts", "*.ts"],
   "exclude": ["node_modules", ".verify", "**/solution.ts", "**/dist"]
 }

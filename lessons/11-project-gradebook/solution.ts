@@ -90,7 +90,7 @@ export function formatReport(report: ClassReport): string {
   ].join("\n");
 }
 
-// --- Demo: runs only via `npm run exercise 02 project` ---
+// --- Demo: runs only via `npm run lesson 11` ---
 const exported = `Ada, 92, 88, 95
 Grace, 78, 85, 80
 Linus, 65, 70, 58`;

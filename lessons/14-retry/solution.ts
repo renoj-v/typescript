@@ -5,7 +5,7 @@ export type RetryOptions = {
   attempts: number;
   delayMs?: number;
   // `error` is `unknown` because a rejected promise can carry *anything*:
-  // an Error, a string, undefined... (Module 12 covers handling it.)
+  // an Error, a string, undefined... (Part 12 covers handling it.)
   onRetry?: (attempt: number, error: unknown) => void;
 };
 

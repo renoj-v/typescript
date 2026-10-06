@@ -1,16 +1,12 @@
-// npm run exercise 05 02          → run the starter, then its tests
-// npm run exercise 05 project     → same for the module's mini-project
-// npm run exercise 05 02 --watch  → re-run the tests every time you save
+// npm run lesson 7            → run lesson 07's starter, then its tests
+// npm run lesson 7 -- --watch → re-run the tests every time you save
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { fail, rel, resolveTarget, run } from "./lib.ts";
+import { fail, rel, resolveLesson, run } from "./lib.ts";
 
 const args = process.argv.slice(2);
 const watch = args.includes("--watch") || args.includes("-w");
-const [moduleArg, exerciseArg] = args.filter((arg) => !arg.startsWith("-"));
-if (exerciseArg === undefined) fail("Usage: npm run exercise <module> <exercise|project> [--watch]");
-
-const dir = resolveTarget(moduleArg, exerciseArg);
+const dir = resolveLesson(args.find((arg) => !arg.startsWith("-")));
 const starter = join(dir, "starter.ts");
 if (!existsSync(starter)) fail(`No starter.ts in ${rel(dir)}`);
 

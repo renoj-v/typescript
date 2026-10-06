@@ -1,4 +1,4 @@
-# 01.02: Read the error
+# Lesson 02: Read the error
 
 **Type:** 🔧 Fix the type errors · **Time:** ~15 min
 
@@ -10,7 +10,7 @@ An online shop's price-formatting helpers are full of type errors. Each one is a
 
 `starter.ts` has five sections, each with one error. For each one:
 
-1. Read the full error message (run `npm run exercise 01 02`, or hover in your editor).
+1. Read the full error message (run `npm run lesson 2`, or hover in your editor).
 2. Find the matching row in the table below and **predict the fix before you make it**.
 3. Fix it so the behavior matches the comment above the function.
 

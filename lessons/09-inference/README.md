@@ -1,4 +1,4 @@
-# 02.04: Inference: delete what's redundant, add what's missing
+# Lesson 09: Inference: delete what's redundant, add what's missing
 
 **Type:** ✍️ Write the code · **Time:** ~15 min
 
@@ -6,7 +6,7 @@
 
 A bookshop inventory module was written by two people. One annotated *everything*, the other annotated *nothing*. Your job is to make it look like it was written by someone who understands inference.
 
-## Part A: remove redundant annotations
+## Step 1: remove redundant annotations
 
 These annotations repeat what TypeScript already infers. Delete them (the test reads your source to check):
 
@@ -18,7 +18,7 @@ Hover over each name afterwards to confirm the inferred type is the same.
 
 > Keep `books: Book[]`. That annotation isn't redundant, because it checks the data against `Book`. Try misspelling `price` in one of the books to see.
 
-## Part B: add the annotations that are needed
+## Step 2: add the annotations that are needed
 
 1. `discountedPrice(price, percent)`: parameters need types (TS7006).
 2. `totalsByGenre()`: `const totals = {}` is inferred as the type `{}`, an object with *no* properties, so you can't add genres to it. Annotate it as `Record<string, number>` (an object with string keys and number values).
@@ -26,7 +26,7 @@ Hover over each name afterwards to confirm the inferred type is the same.
 
 ## Acceptance criteria
 
-- [ ] The redundant annotations from Part A are gone, and the inferred types are unchanged
+- [ ] The redundant annotations from Step 1 are gone, and the inferred types are unchanged
 - [ ] `discountedPrice(20, 25)` → `15`
 - [ ] `totalsByGenre()` → `{ "sci-fi": 24.98, fantasy: 8.5 }` (approximately; it's floating point)
 - [ ] `shippingFor` returns a `number`: `0` for orders of $50 or more, otherwise `4.99`

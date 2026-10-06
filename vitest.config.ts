@@ -1,6 +1,6 @@
 import { defineConfig } from "vitest/config";
 
-const testFiles = ["modules/**/*.test.ts", "modules/**/*.test.tsx", "final-project/**/*.test.ts"];
+const testFiles = ["lessons/**/*.test.ts", "lessons/**/*.test.tsx", "final-project/**/*.test.ts"];
 
 export default defineConfig({
   test: {

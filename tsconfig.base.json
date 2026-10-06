@@ -1,6 +1,6 @@
 {
   // Shared compiler options for every part of the course.
-  // Module 14 walks through each of these in detail.
+  // Part 14 of the course walks through each of these in detail.
   "compilerOptions": {
     // Language & environment
     "target": "ES2023",

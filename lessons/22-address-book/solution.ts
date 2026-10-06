@@ -20,7 +20,7 @@ export interface Contact extends NewContact {
 }
 
 // Every field is optional and there's no `id`, so excess property checks
-// reject `{ id: 99 }` passed as a literal. (Module 08: `Partial<NewContact>`.)
+// reject `{ id: 99 }` passed as a literal. (Part 8: `Partial<NewContact>`.)
 export interface ContactChanges {
   name?: string;
   email?: string;

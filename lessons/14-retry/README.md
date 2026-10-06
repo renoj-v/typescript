@@ -1,4 +1,4 @@
-# 03.03: A typed `retry` for flaky requests
+# Lesson 14: A typed `retry` for flaky requests
 
 **Type:** ✍️ Write the code · **Time:** ~25 min
 
@@ -35,7 +35,7 @@ const receiptId = await retry(() => chargeCard(order), {
 - [ ] Callers may leave out `delayMs` and `onRetry`
 - [ ] All tests pass
 
-> 🔮 This `retry` only works for tasks returning `Promise<string>`. In Module 07 you'll use **generics** to make `retry<T>` work for any result type.
+> 🔮 This `retry` only works for tasks returning `Promise<string>`. In Part 7 you'll use **generics** to make `retry<T>` work for any result type.
 
 <details>
 <summary>Hint: calling an optional callback</summary>

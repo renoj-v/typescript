@@ -1,4 +1,4 @@
-# Mini-project 04: Library lending system
+# Lesson 23 (project): Library lending system
 
 **Time:** ~60–90 min · **Uses:** interfaces, `extends`, optional and `readonly` properties, `Record`, immutable updates
 
@@ -39,7 +39,7 @@ Every function except `availableCopies`, `activeLoans` and `overdueLoans` return
 ## Run it
 
 ```bash
-npm run exercise 04 project
+npm run lesson 23
 ```
 
 ## Acceptance criteria
@@ -53,4 +53,4 @@ npm run exercise 04 project
 
 1. **Fines:** `fineFor(loan, today)`, 25¢ per day overdue, capped at $5.
 2. **Holds:** let members reserve a book with no copies available. When it's returned, the next member in the queue gets it.
-3. **Persistence:** `toJSON(library)` / `fromJSON(text)`. `Date`s become strings in JSON. How will you validate and convert them back? (Module 12 makes this easy with Zod.)
+3. **Persistence:** `toJSON(library)` / `fromJSON(text)`. `Date`s become strings in JSON. How will you validate and convert them back? (Part 12 makes this easy with Zod.)

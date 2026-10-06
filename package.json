@@ -18,10 +18,10 @@
     "vitest": "5.0.3"
   },
   "scripts": {
+    "lesson": "tsx scripts/lesson.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsx scripts/typecheck.ts",
-    "exercise": "tsx scripts/exercise.ts",
     "play": "tsx watch --clear-screen=false playground/index.ts",
     "lint": "eslint",
     "verify": "tsx scripts/verify.ts"

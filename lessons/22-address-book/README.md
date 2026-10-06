@@ -1,4 +1,4 @@
-# 04.05: Add types to a JavaScript address book
+# Lesson 22: Add types to a JavaScript address book
 
 **Type:** 🏷️ Add types to existing JS · **Time:** ~25 min
 
@@ -28,4 +28,4 @@ Then type the functions in `starter.ts`. Don't change their behavior.
 - [ ] `formatAddress` handles a missing postcode
 - [ ] No `any`; all tests pass
 
-> 💡 Writing `ContactChanges` by hand repeats `NewContact`. In Module 08 you'll replace it with `Partial<NewContact>`.
+> 💡 Writing `ContactChanges` by hand repeats `NewContact`. In Part 8 you'll replace it with `Partial<NewContact>`.

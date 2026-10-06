@@ -1,15 +1,14 @@
 // Course-maintenance check (you don't need this as a learner):
 //   1. every solution passes its tests, type-checks, and lints cleanly
 //   2. every untouched starter FAILS its tests
-// Usage: npm run verify [-- <module>]
+// Usage: npm run verify [-- <lesson>]
 import { copyFileSync, cpSync, existsSync, readdirSync, rmSync } from "node:fs";
 import { join, relative } from "node:path";
-import { MODULES_DIR, ROOT, findSolvableDirs, rel, resolveTarget, run } from "./lib.ts";
+import { ROOT, findSolvableDirs, rel, resolveLesson, run } from "./lib.ts";
 
-const moduleArg = process.argv[2];
-const base = moduleArg === undefined ? MODULES_DIR : resolveTarget(moduleArg);
-const dirs = findSolvableDirs(base);
-console.log(`Verifying ${String(dirs.length)} exercises/projects in ${rel(base)}\n`);
+const lessonArg = process.argv[2];
+const dirs = lessonArg === undefined ? findSolvableDirs() : [resolveLesson(lessonArg)];
+console.log(`Verifying ${String(dirs.length)} lesson(s)\n`);
 
 // 1. Solutions: copy the course into .verify/, swap each solution in as the starter.
 const workDir = join(ROOT, ".verify");
@@ -18,13 +17,13 @@ for (const entry of readdirSync(ROOT)) {
   if (["node_modules", ".git", ".verify"].includes(entry)) continue;
   cpSync(join(ROOT, entry), join(workDir, entry), { recursive: true });
 }
-// Swap in *every* solution (not just this module's) so the whole-course tsc run is clean.
+// Swap in *every* solution (not just the target's) so the whole-course tsc run is clean.
 for (const dir of findSolvableDirs()) {
   const copy = join(workDir, relative(ROOT, dir));
   copyFileSync(join(copy, "solution.ts"), join(copy, "starter.ts"));
 }
-const scope = `${relative(ROOT, base)}/`;
-const solutionTests = await run("vitest", ["run", scope], { cwd: workDir, quiet: true });
+const scopes = lessonArg === undefined ? ["lessons/"] : dirs.map((dir) => `${rel(dir)}/`);
+const solutionTests = await run("vitest", ["run", ...scopes], { cwd: workDir, quiet: true });
 const solutionTypes = await run("tsc", ["--noEmit", "-p", "tsconfig.json"], { cwd: workDir, quiet: true });
 const solutionFiles = dirs.map((dir) => join(dir, "solution.ts"));
 const lint = await run("eslint", solutionFiles, { quiet: true });
@@ -48,7 +47,7 @@ const report = (ok: boolean, label: string) => {
 report(solutionTests.code === 0, "All solutions pass their runtime + type tests");
 report(solutionTypes.code === 0, "All solutions type-check (tsc --noEmit)");
 report(lint.code === 0, "All solutions pass ESLint");
-report(passingStarters.length === 0, `All ${String(dirs.length)} starters fail their tests`);
+report(passingStarters.length === 0, `Every starter fails its tests (${String(dirs.length)} checked)`);
 
 if (solutionTests.code !== 0) console.log(`\n--- vitest (solutions) ---\n${solutionTests.output}`);
 if (solutionTypes.code !== 0) console.log(`\n--- tsc (solutions) ---\n${solutionTypes.output}`);

@@ -1,7 +1,7 @@
 // Config helpers. Everything is `any`, so TypeScript can't see the bugs.
 // Step 1: replace every `any` with `unknown`. Step 2: fix the errors.
 
-/** Provided helper: true if `value` is a non-null object. (Module 05 explains `value is ...`.) */
+/** Provided helper: true if `value` is a non-null object. (Part 5 explains `value is ...`.) */
 export function isObject(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
 }

@@ -1,4 +1,4 @@
-# Mini-project 03: Form validator toolkit
+# Lesson 17 (project): Form validator toolkit
 
 **Time:** ~60 min · **Uses:** function types, functions that return functions, default and rest parameters, `Record`
 
@@ -49,7 +49,7 @@ type Validator = (value: string) => string | null; // null = valid, string = err
 ## Run it
 
 ```bash
-npm run exercise 03 project
+npm run lesson 17
 ```
 
 ## Acceptance criteria
@@ -62,5 +62,5 @@ npm run exercise 03 project
 ## Stretch goals (untested)
 
 1. `matches(otherField, message)`, for "confirm password". It needs access to *all* values, so how would you change `Validator`?
-2. Make `validateForm` generic so `rules` keys must match `values` keys (preview of Module 07–09).
+2. Make `validateForm` generic so `rules` keys must match `values` keys (preview of Parts 7–9).
 3. An async validator, e.g. "username is taken" via a fake API: `(value: string) => Promise<string | null>`.

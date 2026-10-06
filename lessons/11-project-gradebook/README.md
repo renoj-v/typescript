@@ -1,4 +1,4 @@
-# Mini-project 02: Gradebook summary
+# Lesson 11 (project): Gradebook summary
 
 **Time:** ~45 min · **Uses:** object types, arrays, tuples, `noUncheckedIndexedAccess`, turning strings from outside into typed data
 
@@ -50,7 +50,7 @@ Top student: Ada (91.7)
 ## Run it
 
 ```bash
-npm run exercise 02 project
+npm run lesson 11
 ```
 
 ## Acceptance criteria
@@ -63,5 +63,5 @@ npm run exercise 02 project
 ## Stretch goals (untested)
 
 1. Add `parseGradebook(text: string): Student[]` that skips blank lines and reports *which line number* failed.
-2. Make `letterGrade` return the union `"A" | "B" | "C" | "D" | "F"` instead of `string` (preview of Module 06).
+2. Make `letterGrade` return the union `"A" | "B" | "C" | "D" | "F"` instead of `string` (preview of Part 6).
 3. Add `+`/`-` grades (e.g. `B+` for 87–89).

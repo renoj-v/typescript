@@ -1,4 +1,4 @@
-# 03.02: An event logger with function types and rest params
+# Lesson 13: An event logger with function types and rest params
 
 **Type:** ✍️ Write the code · **Time:** ~25 min
 

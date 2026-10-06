@@ -63,7 +63,7 @@ export function isValid(errors: Record<string, string>): boolean {
   return Object.keys(errors).length === 0;
 }
 
-// --- Demo: runs only via `npm run exercise 03 project` ---
+// --- Demo: runs only via `npm run lesson 17` ---
 if (import.meta.main) {
   const rules = {
     username: compose(required(), minLength(3), maxLength(20)),

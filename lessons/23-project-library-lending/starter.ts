@@ -40,7 +40,7 @@ export function overdueLoans(library, today) {
   throw new Error("TODO: overdueLoans");
 }
 
-// --- Demo: runs only via `npm run exercise 04 project` ---
+// --- Demo: runs only via `npm run lesson 23` ---
 if (import.meta.main) {
   let library = createLibrary();
   library = addBook(library, { isbn: "978-0441013593", title: "Dune", author: "Frank Herbert", copies: 1 });

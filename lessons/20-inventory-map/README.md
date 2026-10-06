@@ -1,4 +1,4 @@
-# 04.03: Inventory with index signatures and `Record`
+# Lesson 20: Inventory with index signatures and `Record`
 
 **Type:** ✍️ Write the code · **Time:** ~20 min
 

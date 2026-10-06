@@ -1,4 +1,4 @@
-# 02.05: `never`, the type for things that can't happen
+# Lesson 10: `never`, the type for things that can't happen
 
 **Type:** ✍️ Write the code · **Time:** ~15 min
 
@@ -6,7 +6,7 @@
 
 An order-tracking service needs three small things: a helper that always throws, a function that reads required environment variables, and a status label that can't silently miss a status.
 
-`OrderStatus` is a **union type**: a value that is one of `"pending"`, `"shipped"` or `"delivered"`. Modules 05 and 06 explain unions properly. For now, just use it.
+`OrderStatus` is a **union type**: a value that is one of `"pending"`, `"shipped"` or `"delivered"`. Parts 5 and 6 explain unions properly. For now, just use it.
 
 ## Your task
 
@@ -25,6 +25,6 @@ An order-tracking service needs three small things: a helper that always throws,
 <details>
 <summary>Why does assertNever(status) catch missing cases?</summary>
 
-Inside the `default` branch, TypeScript has removed every status you handled. If you've handled them all, `status` is `never` and the call is fine. If you forgot one, `status` is that leftover value (e.g. `"delivered"`), which isn't assignable to `never`, so you get a compile error pointing at the gap. Module 05 uses this pattern a lot.
+Inside the `default` branch, TypeScript has removed every status you handled. If you've handled them all, `status` is `never` and the call is fine. If you forgot one, `status` is that leftover value (e.g. `"delivered"`), which isn't assignable to `never`, so you get a compile error pointing at the gap. Part 5 uses this pattern a lot.
 
 </details>

@@ -97,7 +97,7 @@ export function overdueLoans(library: Library, today: Date): Loan[] {
   return library.loans.filter((loan) => isActive(loan) && loan.dueDate < today);
 }
 
-// --- Demo: runs only via `npm run exercise 04 project` ---
+// --- Demo: runs only via `npm run lesson 23` ---
 if (import.meta.main) {
   let library = createLibrary();
   library = addBook(library, { isbn: "978-0441013593", title: "Dune", author: "Frank Herbert", copies: 1 });

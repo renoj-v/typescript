@@ -11,7 +11,7 @@ import {
 
 const source = readFileSync(new URL("./starter.ts", import.meta.url), "utf8");
 
-describe("Part A: redundant annotations removed", () => {
+describe("Step 1: redundant annotations removed", () => {
   test("source no longer contains them", () => {
     expect(source).not.toMatch(/prices:\s*number\[\]/);
     expect(source).not.toMatch(/\(book:\s*Book\)/);
@@ -31,7 +31,7 @@ describe("Part A: redundant annotations removed", () => {
   });
 });
 
-describe("Part B: needed annotations added", () => {
+describe("Step 2: needed annotations added", () => {
   test("discountedPrice", () => {
     expectTypeOf(discountedPrice).toEqualTypeOf<(price: number, percent: number) => number>();
     expect(discountedPrice(20, 25)).toBe(15);

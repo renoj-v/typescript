@@ -1,53 +1,34 @@
-// Helpers shared by the course scripts (exercise, typecheck, verify).
+// Helpers shared by the course scripts (lesson, typecheck, verify).
 import { spawn } from "node:child_process";
 import { existsSync, readdirSync } from "node:fs";
 import { join, relative, resolve } from "node:path";
 
 export const ROOT = resolve(import.meta.dirname, "..");
-export const MODULES_DIR = join(ROOT, "modules");
-
-const pad = (n: string) => n.padStart(2, "0");
-
-function findChild(dir: string, prefix: string): string | undefined {
-  if (!existsSync(dir)) return undefined;
-  const match = readdirSync(dir).find((name) => name.startsWith(`${prefix}-`) || name === prefix);
-  return match === undefined ? undefined : join(dir, match);
-}
+export const LESSONS_DIR = join(ROOT, "lessons");
 
 /**
- * Turn CLI args like `05 02` or `5 project` into an absolute folder path.
- * Exits with a helpful message if the folder doesn't exist.
+ * Turn a CLI arg like `7` or `07` into an absolute lesson folder path.
+ * Exits with a helpful message if the lesson doesn't exist.
  */
-export function resolveTarget(moduleArg: string | undefined, exerciseArg?: string): string {
-  if (moduleArg === undefined) {
-    fail("Usage: <module> [exercise|project], e.g. `05 02` or `05 project`");
+export function resolveLesson(lessonArg: string | undefined): string {
+  if (lessonArg === undefined || !/^\d+$/.test(lessonArg)) {
+    fail("Usage: give a lesson number, e.g. `npm run lesson 7`");
   }
-  const moduleDir = findChild(MODULES_DIR, pad(moduleArg));
-  if (moduleDir === undefined) fail(`No module found for "${moduleArg}" in modules/`);
-  if (exerciseArg === undefined) return moduleDir;
-  if (exerciseArg === "project") {
-    const projectDir = join(moduleDir, "project");
-    if (!existsSync(projectDir)) fail(`Module "${moduleArg}" has no project/ folder`);
-    return projectDir;
-  }
-  const exerciseDir = findChild(join(moduleDir, "exercises"), pad(exerciseArg));
-  if (exerciseDir === undefined) fail(`No exercise "${exerciseArg}" in ${rel(moduleDir)}/exercises`);
-  return exerciseDir;
+  const prefix = `${lessonArg.padStart(2, "0")}-`;
+  const match = existsSync(LESSONS_DIR)
+    ? readdirSync(LESSONS_DIR).find((name) => name.startsWith(prefix))
+    : undefined;
+  if (match === undefined) fail(`No lesson ${lessonArg} in lessons/`);
+  return join(LESSONS_DIR, match);
 }
 
-/** Every folder in the course that contains a `solution.ts`. */
-export function findSolvableDirs(base = MODULES_DIR): string[] {
-  const found: string[] = [];
-  const walk = (dir: string) => {
-    for (const entry of readdirSync(dir, { withFileTypes: true })) {
-      if (!entry.isDirectory() || entry.name === "node_modules") continue;
-      const full = join(dir, entry.name);
-      if (existsSync(join(full, "solution.ts"))) found.push(full);
-      walk(full);
-    }
-  };
-  if (existsSync(base)) walk(base);
-  return found.sort();
+/** Every lesson folder that contains a `solution.ts`. */
+export function findSolvableDirs(): string[] {
+  if (!existsSync(LESSONS_DIR)) return [];
+  return readdirSync(LESSONS_DIR)
+    .map((name) => join(LESSONS_DIR, name))
+    .filter((dir) => existsSync(join(dir, "solution.ts")))
+    .sort();
 }
 
 export const rel = (path: string) => relative(ROOT, path) || ".";

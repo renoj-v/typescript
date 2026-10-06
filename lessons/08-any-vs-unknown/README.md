@@ -1,4 +1,4 @@
-# 02.03: `any` vs `unknown`: make a config loader safe
+# Lesson 08: `any` vs `unknown`: make a config loader safe
 
 **Type:** 🔧 Fix the type errors · **Time:** ~20 min
 

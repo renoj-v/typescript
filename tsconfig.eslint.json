@@ -1,6 +1,6 @@
 {
   // Used only by ESLint: like tsconfig.json, but solutions are included.
   "extends": "./tsconfig.base.json",
-  "include": ["modules", "playground", "final-project", "scripts", "*.ts"],
+  "include": ["lessons", "playground", "final-project", "scripts", "*.ts"],
   "exclude": ["node_modules", ".verify", "**/dist"]
 }

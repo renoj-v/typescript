@@ -29,7 +29,7 @@ export function printReceipt(order) {
   throw new Error("TODO: printReceipt");
 }
 
-// --- Demo: runs only via `npm run exercise 01 project` ---
+// --- Demo: runs only via `npm run lesson 5` ---
 const sampleOrder = {
   id: "A-1001",
   customer: "Ada",

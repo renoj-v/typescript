@@ -1,4 +1,4 @@
-# 04.02: An immutable order with `readonly` and optional properties
+# Lesson 19: An immutable order with `readonly` and optional properties
 
 **Type:** 🔧 Fix the type errors · **Time:** ~20 min
 
