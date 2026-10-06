@@ -1,0 +1,7 @@
+{
+  // Use the course's pinned TypeScript, not the one bundled with VS Code.
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "editor.formatOnSave": true,
+  "eslint.useFlatConfig": true
+}

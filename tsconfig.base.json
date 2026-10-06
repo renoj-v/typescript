@@ -1,0 +1,32 @@
+{
+  // Shared compiler options for every part of the course.
+  // Module 14 walks through each of these in detail.
+  "compilerOptions": {
+    // Language & environment
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": ["node"],
+
+    // Modules: we let a bundler/runner (Vite, Vitest, tsx) handle files,
+    // so tsc only type-checks and never emits JavaScript.
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+
+    // Type checking: strict from day one, plus two extra-safe flags.
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+
+    // Quality of life
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  }
+}

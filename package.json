@@ -1,0 +1,29 @@
+{
+  "name": "typescript-course",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A hands-on, self-paced TypeScript course",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.1",
+    "eslint": "10.12.0",
+    "tsx": "4.23.15",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.1",
+    "vite": "8.3.3",
+    "vitest": "5.0.3"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsx scripts/typecheck.ts",
+    "exercise": "tsx scripts/exercise.ts",
+    "play": "tsx watch --clear-screen=false playground/index.ts",
+    "lint": "eslint",
+    "verify": "tsx scripts/verify.ts"
+  }
+}

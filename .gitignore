@@ -1,0 +1,7 @@
+node_modules/
+.verify/
+dist/
+coverage/
+*.tsbuildinfo
+.DS_Store
+out/

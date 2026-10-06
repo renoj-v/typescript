@@ -1,0 +1,5 @@
+{
+  // Same strict settings as the course. Experiment freely in this folder.
+  "extends": "../tsconfig.base.json",
+  "include": ["."]
+}
