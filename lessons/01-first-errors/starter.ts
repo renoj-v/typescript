@@ -11,16 +11,16 @@ export interface Card {
 export function createCard(recipient: string, occasion: string, from: string): Card {
   return {
     recipient: recipient,
-    ocassion: occasion,
-    from,
-    year: new Date().getFullYear().toString(),
+    occasion: occasion,
+    from: from,
+    year: new Date().getFullYear(),
   };
 }
 
 export function renderCard(card: Card): string {
-  return `Dear ${card.recipient.toUppercase()},\nHappy ${card.occasion}!\nLove, ${card.from} (${card.year})`;
+  return `Dear ${card.recipient.toUpperCase()},\nHappy ${card.occasion}!\nLove, ${card.from} (${card.year})`;
 }
 
 export function cardCount(cards: Card[]): number {
-  return cards.lenght;
+  return cards.length;
 }
