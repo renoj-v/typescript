@@ -7,27 +7,27 @@ export function formatPrice(amount: number, currency: string): string {
 }
 
 // 1. Sum a list of prices and format the total in dollars.
-export function formatTotal(prices) {
+export function formatTotal(prices: number[]) {
   let total = 0;
   for (const price of prices) total += price;
   return formatPrice(total, "$");
 }
 
 // 2. Apply an optional discount (0.2 = 20% off). No discount means full price.
-export function applyDiscount(amount: number, discount?: number): number {
+export function applyDiscount(amount: number, discount = 0): number {
   return amount - amount * discount;
 }
 
 // 3. Build a price tag like "Mug: $12.00".
-export function formatPriceTag(label: string, price: string): string {
+export function formatPriceTag(label: string, price: number): string {
   return `${label}: $${price.toFixed(2)}`;
 }
 
 // 4. Flat-rate shipping, shown as "$4.99".
-export const shippingCost = "4.99";
+export const shippingCost = 4.99;
 export const shippingLabel = formatPrice(shippingCost, "$");
 
 // 5. Format an amount in euros, e.g. "€3.00".
 export function formatEuro(amount: number): string {
-  return formatPrice(amount);
+  return formatPrice(amount, "€");
 }
